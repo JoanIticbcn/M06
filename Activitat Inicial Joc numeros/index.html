@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc adivina el numero</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+
+    <div class="top">
+        <button onclick="setup()">JUGAR</button>
+        <p>Busca un numero entre 1 i 20</p>
+        <h1>JOC D'ADIVINA EL NUMERO</h1>
+        <button id="reset" onclick="reiniciar()">Reinicia</button>
+    </div>
+    <div class="main">
+        <label for="entrada">Adivina el numero</label>
+        <input type="number" name="entrada" id="entrada"></input>
+        <button id="prova" onclick="prova()">Prova Sort</button>
+        <p id="gia"></p>
+    </div>
+    <div class="bottom">
+        <p>Numero de intents</p>
+        <p id="nintens"></p>
+        <p>Punts totals</p>
+        <p id="punts"></p>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

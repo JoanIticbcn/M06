@@ -1,0 +1,35 @@
+*{
+    margin: 30px 30px 30px 30px;
+}
+body{
+    height: 100%;
+    background-color: black;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+    background-color: white;
+    color: red;
+    border-radius: 25%;
+}
+div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.top{
+    background-color: aqua;
+    height: 150px;
+    
+}
+div.main{
+    background-color: lightcoral;
+    height: 250px;
+}
+div.bottom{
+    background-color: lightgreen;
+    height: 150px;
+   
+}
