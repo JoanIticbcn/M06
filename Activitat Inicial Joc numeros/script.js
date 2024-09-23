@@ -37,7 +37,11 @@ function prova(){
         alert("Has perdut");
         reiniciar();
     }
-    verificarNumero(numeroentrada);
+    if(numeroentrada){
+        verificarNumero(numeroentrada);
+    }else{
+        alert("No has introduit cap valor ")
+    }  
 }
 
 //Funcio auxiliar per a verificar si el numero es mes gran o més petit que el numero misterios i actuar en consecuencia del resultat
