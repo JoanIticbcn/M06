@@ -7,6 +7,7 @@ let gia = document.getElementById("gia");
 let textNintents = document.getElementById("nintens");
 let textPunts = document.getElementById("punts");
 let bakg = document.getElementById("body");
+let numerosJugats = [];
 
 //Funció per a començar el joc relacionada amb el boto JUGAR
 function setup() {
@@ -17,6 +18,7 @@ function setup() {
     document.getElementById("entrada").value = "";
     gia.textContent = "Molta sort"
     bakg.style.backgroundColor = "white"
+    numerosJugats = [];
 }
 //Funció per a reiniciar el joc relacionada amb el boto REINICIAR
 function reiniciar(){
@@ -28,6 +30,7 @@ function reiniciar(){
     document.getElementById("entrada").value = "";
     gia.textContent = "Molta sort"
     bakg.style.backgroundColor = "white";
+    numerosJugats = [];
 }
 //Funcio per a provar un numero relacionada amb el boto PROVA SORT
 function prova(){
@@ -62,4 +65,8 @@ function verificarNumero(n) {
     }
     textNintents.textContent = nIntents - 1;
     nIntents--;
+    document.getElementById("entrada").value = "";
+    numerosJugats.push(n);
+    console.log(numerosJugats);
+    document.getElementById("nJugats").textContent = numerosJugats;
 }
