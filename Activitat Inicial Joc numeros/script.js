@@ -1,3 +1,4 @@
+//Creació de les variables necessaries
 let numeroaleatori;
 let numeroentrada;
 let nIntents = 20;
@@ -7,7 +8,7 @@ let textNintents = document.getElementById("nintens");
 let textPunts = document.getElementById("punts");
 let bakg = document.getElementById("body");
 
-
+//Funció per a començar el joc relacionada amb el boto JUGAR
 function setup() {
     numeroaleatori = Math.floor(Math.random() * 20 + 1);;
     nIntents = 20;
@@ -17,7 +18,7 @@ function setup() {
     gia.textContent = "Molta sort"
     bakg.style.backgroundColor = "white"
 }
-
+//Funció per a reiniciar el joc relacionada amb el boto REINICIAR
 function reiniciar(){
     punts = 0;
     numeroaleatori = Math.floor(Math.random() * 20 + 1);;
@@ -28,9 +29,9 @@ function reiniciar(){
     gia.textContent = "Molta sort"
     bakg.style.backgroundColor = "white";
 }
-
+//Funcio per a provar un numero relacionada amb el boto PROVA SORT
 function prova(){
-    numeroentrada = document.getElementById("entrada").value
+    numeroentrada = Number(document.getElementById("entrada").value)
     if(nIntents<1){
         bakg.style.backgroundColor = "red"
         alert("Has perdut");
@@ -39,7 +40,7 @@ function prova(){
     verificarNumero(numeroentrada);
 }
 
-
+//Funcio auxiliar per a verificar si el numero es mes gran o més petit que el numero misterios i actuar en consecuencia del resultat
 function verificarNumero(n) {
     if (n > numeroaleatori) {
         gia.textContent = "El numero es massa gran";
