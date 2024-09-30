@@ -163,4 +163,6 @@ function numerosDeCadaTipus(){
     console.log(Cbooleans)
 }
 //Exercici 24
-console.log(Date.now())
+const daten = new Date().toLocaleDateString();
+console.log(daten)
+//Exercici 25
