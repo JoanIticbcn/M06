@@ -58,3 +58,109 @@ if(num10.includes('javascript')){
     console.log("Text modificat:", textModificat);
 }
 //Exercici 11
+let num11 = prompt("Entra una paraula")
+let paraularesultant = num11.replace(" ",",")
+console.log(paraularesultant)
+//Exercici 12
+let num12 = prompt("Entra una paraula")
+let resultatpparaluan = num12.replace(" ","")
+console.log(resultatpparaluan)
+//Exercici 13
+let data = prompt("Entra una hora")
+console.log("La hora introduida es "+data.slice(0,2)+data.slice(3,5)+data.slice(6,8))
+//Exercici 14
+let num14 = prompt("Entra una paraula amb mes de 10 caracters")
+num14 = num14.padEnd(10,'*')
+//Exercici 15
+let num15 = prompt("Entra un codi de 5 digits")
+num15 = num15.padStart(5,"0")
+console.log("USR-"+num15)
+//Exercici 16
+//PORRO
+//Exercici 17
+let num17 = prompt("Entra una paraula")
+let arr = []
+for(let i=0;i<num17.length;i++){
+    arr.push(num17[i])
+}
+console.log(arr)
+//Exercici 18
+let num18 = prompt("Entra una paraula")
+let arr2 = []
+for(let i=0;i<num17.length;i++){
+    arr2.push(num17[i])
+}
+document.getElementById("a18").textContent = arr2
+//Exercici 19
+const caracters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+let num19 = prompt("Entra la llargada del teu password")
+let password =""
+for(let i=0;i<num19;i++){
+    password+=caracters[Math.floor(Math.random()*caracters.length+1)]
+}
+console.log(password)
+//Exercici 20
+const formats = ["jpg", "jpeg", "png", "docx", "pdf", "xlsx"]
+let num20 = prompt("Entra el nom de un fitxer")
+let extensio20 = num20.slice(num20.indexOf('.')-1)
+if(extensio in formats){
+    console.log("Esta a dins de la extensio de formats valids")
+}
+//Exercici 21
+function sumaNumeros() {
+    let numeros = []; 
+    let sumaTotal = 0; 
+    for (let i = 0; i < 10; i++) {
+        let numero = parseFloat(prompt(`Introdueix el número ${i + 1} de 10:`));
+        numeros.push(numero);
+        sumaTotal += numero;
+        if (sumaTotal > 20) {
+            console.log(`Suma total: ${sumaTotal}`);
+            console.log(`Última posició usada per sumar: ${i + 1}`);
+            break; 
+        }
+    }
+}
+sumaNumeros();
+//Exercici 22
+function numerosmenors10() {
+    let numeros2 = []; 
+    for (let i = 0; i < 10; i++) {
+        let numero = parseFloat(prompt(`Introdueix el número ${i + 1} de 10:`));
+        numeros2.push(numero);
+        for(let j=0;j<numeros2.length;j++){
+            if(numeros2[j]<10){
+                numeros2.splice(numeros2[j])
+            }
+        }
+    }
+    console.log(numeros2)
+}
+numerosmenors10();
+//Exercici 23
+function numerosDeCadaTipus(){
+    let numeros3 =[]
+    let Cnumeros =0;
+    let Cstrings=0;
+    let Cbooleans=0;
+    for (let i = 0; i < 10; i++) {
+        let numero = parseFloat(prompt("Introdueix un numero: "))
+        numeros3.push(numero)
+    }
+    for(let j=0;j<numeros3.length;j++){
+        if(typeof numeros3[j]=="number"){
+            Cnumeros++;
+        }
+        if(typeof numeros3[j]=="string"){
+            Cstrings++;
+        }
+        if(typeof numeros3[j]=="boolean"){
+            Cbooleans++;
+        }
+    }
+    console.log(Cnumeros)
+    console.log(Cstrings)
+    console.log(Cbooleans)
+}
+//Exercici 24
+console.log(Date.now())
